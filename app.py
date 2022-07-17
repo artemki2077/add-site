@@ -167,12 +167,14 @@ def page_blog():
     return render_template("blog.html", blogs=blogs)
 
 def start_web():
-    app.run(host='0.0.0.0', port=8080, debug=False, threaded=True)
-
-
-if __name__ == "__main__":
-    get_price()
-    blogs = get_blogs()
-    th = Thread(target=start_web, args=())
-    th.start()
     bot.polling(non_stop=True)
+
+
+get_price()
+blogs = get_blogs()
+th = Thread(target=start_web, args=())
+th.start()
+
+if __name__ == "__main__":    
+    app.run(host='0.0.0.0', port=8080, debug=False, threaded=True)
+    
