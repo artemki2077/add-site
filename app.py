@@ -153,7 +153,7 @@ def page_book():
         for i in books:
             su += all_p[i]
             answer += f"\n  •{i} - ${all_p[i]}"
-        answer += f'sum: {su}\ntax: {su * 0.13}\nTOTAL: {su * 1.13}'
+        answer += f'\nsum: ${su}\ntax: ${su * 0.13}\nTOTAL: ${su * 1.13}'
         for i in bot_settings["active_ids"]:
             bot.send_message(i, answer)
         return 'ok'
