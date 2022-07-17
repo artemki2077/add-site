@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleaning with ❤</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style/blog.css') }}">
+</head>
+<body>
+    <div class="header">
+        <div class="icon">
+            <a href="/"><img src="{{ url_for('static',filename='imgs/icon.png') }}"></a>
+            
+        </div>
+        <div class="links">
+            <div class="Link_block l_Book"><a class="link" href="/Book">Book</a></div>
+            <div class="Link_block l_About"><a class="link" href="/#About">About Us</a></div>
+            <div class="Link_block l_Pricing"><a class="link" href="/#Pricing">Pricing</a></div>
+            <div class="Link_block l_Contact"><a class="link" href="/#Contact">Contact</a></div>
+            <div class="Link_block l_Blog"><a class="link" href="#">Blog</a></div>
+        </div>
+    </div>
+    <div class="bg_img">
+        <img class="bg_img_r" src="{{ url_for('static',filename='imgs/bg_img.jpg') }}">
+        <div class="text">
+            <center><span class="main_text">Cleaning with  ❤</span></center>
+            <center class="add_text">Blog</center>
+        </div>
+        
+    </div>
+    <div class="blogs">
+        {% for i in blogs %}
+                <div class="new">
+                    <div class="new_img">
+                        <img src="{{blogs[i]['src_img']}}">
+                    </div>
+                    <div class="new_text">
+                        <div class="blog_lable">
+                            {{i}}
+                        </div>
+                        
+                        <div class="main_text">
+                            {{blogs[i]['text']}}
+                        </div>
+                    </div>
+                </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

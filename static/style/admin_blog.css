@@ -1,0 +1,22 @@
+@font-face {
+    font-family: Ubuntu-Bold;
+    src:url(../fonts/Ubuntu-Bold.ttf)
+}
+@font-face {
+    font-family: Ubuntu-Regular;
+    src:url(../fonts/Ubuntu-Regular.ttf)
+}
+*{
+    font-family: Ubuntu-Regular;
+}
+h1{
+    font-family: Ubuntu-Bold;
+}
+.post{
+    display: flex;
+    background-color: rgb(77, 129, 242);
+    padding: 20px;
+}
+.elem{
+    margin: 10px;
+}

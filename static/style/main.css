@@ -1,0 +1,452 @@
+@font-face {
+    font-family: Ubuntu-Bold;
+    src:url(../fonts/Ubuntu-Bold.ttf)
+}
+@font-face {
+    font-family: Ubuntu-Regular;
+    src:url(../fonts/Ubuntu-Regular.ttf)
+}
+
+
+body{
+    background-color: #fff;
+}
+*{
+    margin: 0;
+}
+
+.header{
+    z-index: 999999;
+    position: fixed;
+    display: flex;
+    height: 10vh;
+    background-color: rgb(199, 197, 165);
+    color: #fff;
+    width: 100vw;
+    top: 0;
+    justify-content: space-around;
+    transition: 0.5s;
+}
+
+.header .icon img{
+    object-fit:cover;
+    height: 10vh;
+    width: 7.5vh;
+    display: inline-block;
+    margin-left: 5px;
+    transform: scale(2, 2);
+}
+.header .icon{
+    width: min-content;
+    display: inline-block;
+}
+
+.header .links{
+    height: 10vh;
+    width: 40vw;
+    /* background-color: red; */
+    /* display: inline-block; */
+    display: flex;
+    padding: auto;
+}
+.header .links *{
+    font-family: Ubuntu-Bold;
+    display: inline-block;
+    /* display: flex; */
+    margin: auto;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.2s;
+    color: #282828;
+    transition: 0.2s;
+}
+.header .links a:hover{
+    
+    color: red;
+}
+
+.test{
+    height: 5vh;
+    background-color: #282828;
+}
+.bg_img{
+    height: calc((100vw / 1.5) - 61vh);
+}
+
+.bg_img .bg_img_r{
+    width: 100%;
+    position: absolute;
+    top: -30%;
+    z-index: -1;
+    filter: brightness(50%);
+}
+
+.bg_img .main_text{
+    font-family: Ubuntu-Bold;
+    font-size: 5vw;
+    color: #fff;
+}
+.bg_img a{
+    border: solid 2px;
+    text-decoration: none;
+    color: white;
+    font-size: 2vw;
+    background-color: red;
+    border-color: red;
+    padding: 10px 50px;
+    font-family:  Ubuntu-Bold;
+    transition: 0.2s;
+
+    border-radius: 10px;
+}
+.bg_img a:hover{
+    background-color: transparent;
+    border-color: white;
+    
+    
+}
+
+
+.bg_img .text .book_click{
+    margin-top: 15px;
+}
+
+.bg_img .text{
+    margin-top: 30vmin;
+    /* transform: translateY(30vmin); */
+}
+.about{
+    padding-top: 8vh;
+    font-family: Ubuntu-bold;
+    background-color: #fff;
+    width: 100%;
+    font-size: 4rem;
+}
+
+.about span{
+    color: #999999;
+}
+
+.abavs{
+    display: flex;
+    margin: 10px auto;
+    flex: 400 500 auto;
+    width: 80%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.abav{
+    padding: 25px;
+    background-color: rgb(234, 234, 234);
+    border-radius: 20px;
+    color: #666666;
+    width: 247px;
+    flex: 0 0 auto;
+    height: 25vh;
+    margin: auto;
+    display: inline;
+    margin-bottom: 5vh;
+    transition: 0.3s;
+}
+.abav:hover{
+    width: 253px;
+    background-color: rgb(223 223 223);
+    /* scale: (2, 2); */
+}
+.abav img{
+    height: 10vh;
+    margin: auto;
+}
+.abav .text{
+    margin-top: 20px;
+    border-top: solid 3px;
+    border-color: #666666;
+    padding-top: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+.abav .t2{
+    font-size: 1.3rem;
+}
+.abav .t3{
+    font-size: 1.4rem;
+}
+
+.price{
+    /* background-color: rgb(88, 95, 113); */
+    background-color: rgb(108 132 193);
+    width: 100%;
+    height: auto;
+    padding: 40px 0;
+}
+
+.price_lable{
+    text-align: center;
+    font-family: Ubuntu-Bold;
+    font-size: 5vw;
+    color: white;
+    padding-top: 45px;
+}
+
+.container {
+    /* display: flex; */
+    width: max-content;
+    margin: 30px auto;
+	/* position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); */
+}
+
+table {
+	width: auto;
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.col,
+td {
+	padding: 15px;
+	background-color: rgba(255, 255, 255, 0.2);
+	color: #fff;
+    font-family: Ubuntu-Regular;
+}
+.col {
+	text-align: left;
+}
+.c2{
+    text-align: right;
+}
+.cl2{
+    padding-right: 20px;
+    text-align: right;
+}
+.cl1{
+    text-align: left;
+}
+
+thead .col {
+	/* background-color: #8f556e; */
+    background-color: #a0d03a;
+}
+
+tbody tr:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+tbody td {
+	position: relative;
+}
+
+tbody td:hover:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	background-color: rgba(255, 255, 255, 0.2);
+	z-index: -1;
+}
+
+.contact{
+    width: 100%;
+    padding-top: 20px;
+    background-color: #282828;
+}
+
+.contac_lable{
+    text-align: center;
+    font-family: Ubuntu-Bold;
+    font-size: 5vw;
+    margin-bottom: 3vh;
+    color: #666666;
+}
+.con{
+    width: 30%;
+    display: flex;
+    background-color: #6666;
+    border-radius: 30px;
+    padding: 15px;
+    color: white;
+}
+.contacts img{
+    width: 8vw;
+    border-radius: 20px;
+}
+.contacts{
+    display: flex;
+    justify-content: space-evenly;
+}
+.con_lable{
+    font-size: 2vw;
+    font-family: 'Ubuntu-Bold';
+    padding: 10px 20px;
+}
+.con_main{
+    font-family: 'Ubuntu-Regular';
+    padding: 0 20px;
+    font-size: 1.2vw;
+}
+.Add_lable{
+    font-family: Ubuntu-Bold;
+    font-size: 1.5vw;
+    text-align: center;
+}
+input[type='text'],input[type='email'],input[type='tel']{
+    width: 60vw;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #fff;
+    background-color: rgb(108 132 193);
+    border: solid 2px;
+    border-color: #fff;
+
+}
+.name h3{
+    color: #fff;
+    margin: 20px 1px;
+    font-size: 25px;
+}
+.name{
+    color: #fff;
+    font-family: 'Ubuntu-Bold';
+    width: max-content;
+    margin: 20px auto;
+}
+::placeholder {
+    color: rgb(200, 219, 205);
+  }
+.form{
+    color: #fff;
+    margin-top: 10vh;
+}
+.select_lable{
+    text-align: center;
+    font-family: Ubuntu-Bold;
+    font-size: 35px;
+    color: white;
+}
+input[type='checkbox']{
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    border-width: 20px;
+}
+.c0 input[type='checkbox']{
+    width: 20px;
+    height: 20px;
+}
+
+.end {
+    width: 40vw;
+    margin: auto;
+    text-align: end;
+    font-family: 'Ubuntu-Regular';
+    font-size: 20px;
+}
+.end .el{
+    margin: 10px 0;
+}
+.adr_elem{
+    margin: 20px 0;
+}
+.l_menu{
+    display: none;
+}
+input[type=submit] {
+    padding: 1.5vh 13vh;
+    background: rgb(254, 180, 39);
+    border: 0 none;
+    cursor: pointer;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+.submit{
+    width: max-content;
+    margin: 20px auto;
+}
+@media (max-width: 600px) {
+    .abav{
+        width: 150px;
+        padding: 10px;
+    }
+    .abav .text{
+        font-size: 0.9rem;
+    }
+    .abav:hover{
+        width: 150px;
+    }
+    .abavs {
+        width: 95%;
+    }
+    .Add_lable {
+        font-size: 1rem;
+    }
+    .bg_img{
+        height: 17vh;
+    }
+    .bg_img .bg_img_r{
+        height: auto;
+        top: 0%;
+    }
+    .bg_img .text{
+        transform: translate(0, 0)
+    }
+    .bg_img .main_text {
+        font-size: 11vw;
+    }
+    .bg_img a{
+        font-size: 6vw;
+        padding: 10px 55px;
+    }
+    .container{
+        width: 95%;
+    }
+    .con{
+        width: 80%;
+    }
+    .con_lable{
+        font-size: 5vw;
+        padding: 5px 10px;
+    }
+    .con_main {
+        padding: 0 8px;
+        font-size: 3.0vw;
+    }
+    .contacts{
+        flex-wrap: wrap;
+    }
+    .con{
+        margin: 5px 0;
+    }
+    .end{
+        width: 80vw;
+    }
+    .header .links{
+        width: auto;
+    }
+    .header .links *{
+        margin: auto 3px;
+        font-size: 0.8rem;
+    }
+    .about span {
+        font-size: 10vw;
+    }
+    .about {
+        padding-top: 0;
+    }
+
+
+
+    .contacts img {
+        width: 8vw;
+        height: 8vw;
+        border-radius: 10px;
+    }
+    input[type=submit]{
+        padding: 2.3vh 13vh;
+    }
+}

@@ -1,0 +1,250 @@
+@font-face {
+    font-family: Ubuntu-Bold;
+    src:url(../fonts/Ubuntu-Bold.ttf)
+}
+@font-face {
+    font-family: Ubuntu-Regular;
+    src:url(../fonts/Ubuntu-Regular.ttf)
+}
+body{
+    background-color: #fff;
+}
+*{
+    margin: 0;
+}
+
+.header{
+    z-index: 999999;
+    position: fixed;
+    display: flex;
+    height: 10vh;
+    background-color: rgb(199, 197, 165);
+    color: #fff;
+    width: 100vw;
+    top: 0;
+    justify-content: space-around;
+    transition: 0.5s;
+}
+
+.header .icon img{
+    height: 10vh;
+    display: inline-block;
+    padding-left: 5px;
+    transform: scale(2, 2);
+}
+.header .icon{
+    display: inline-block;
+}
+
+.header .links{
+    height: 10vh;
+    width: 40vw;
+    /* background-color: red; */
+    /* display: inline-block; */
+    display: flex;
+    padding: auto;
+}
+.header .links *{
+    font-family: Ubuntu-Bold;
+    display: inline-block;
+    /* display: flex; */
+    margin: auto;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.2s;
+    color: #282828;
+    transition: 0.2s;
+}
+.header .links a:hover{
+    
+    color: red;
+}
+
+.test{
+    height: 5vh;
+    background-color: #282828;
+}
+.bg_img{
+    height: calc((100vw / 1.5) - 61vh);
+}
+
+.bg_img .bg_img_r{
+    width: 100%;
+    position: absolute;
+    top: -30%;
+    z-index: -1;
+    filter: brightness(50%);
+}
+
+.bg_img .main_text{
+    font-family: Ubuntu-Bold;
+    font-size: 5vw;
+    color: #fff;
+}
+.bg_img a{
+    border: solid 2px;
+    text-decoration: none;
+    color: white;
+    font-size: 2vw;
+    background-color: red;
+    border-color: red;
+    padding: 10px 50px;
+    font-family:  Ubuntu-Bold;
+    transition: 0.2s;
+
+    border-radius: 10px;
+}
+.bg_img a:hover{
+    background-color: transparent;
+    border-color: white;
+    
+    
+}
+
+
+.bg_img .text .add_text{
+    margin-top: 1vh;
+    color: white;
+    font-family: Ubuntu-Regular;
+    font-size: 2.5vw;
+}
+
+.bg_img .text{
+    margin-top: 30vmin;
+    /* transform: translateY(30vmin); */
+}
+.blogs{
+    width: 100%;
+    display: flex;
+    padding: 20px 0;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.blog_lable{
+    font-family: 'Ubuntu-Bold';
+    /* color: #666666; */
+    margin: 20px;
+    font-size: 2vw;
+}
+.main_text{
+    font-family: 'Ubuntu-Regular';
+    color: #666666;
+    font-size: 1vw;
+    margin: 20px;
+    text-align: justify;
+}
+
+.new_img img{
+    width: 25vw;
+    border-radius: 20px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.new_text{
+    padding: 10px;
+}
+.new{
+    margin: 20px 0;
+    width: 25vw;
+    height: auto;
+    background-color: #6666;
+    border-radius: 20px;
+
+}
+.end_sum{
+    display: inline;
+}
+
+.sum{
+    display: inline;
+}
+@media (max-width: 600px) {
+    .abav{
+        width: 150px;
+        padding: 10px;
+    }
+    .abav .text{
+        font-size: 0.9rem;
+    }
+    .abav:hover{
+        width: 150px;
+    }
+    .abavs {
+        width: 95%;
+    }
+    .Add_lable {
+        font-size: 1rem;
+    }
+    .bg_img{
+        height: 17vh;
+    }
+    .bg_img .bg_img_r{
+        height: auto;
+        top: 0%;
+    }
+    .bg_img .text{
+        transform: translate(0, 0)
+    }
+    .bg_img .main_text {
+        font-size: 11vw;
+    }
+    .bg_img a{
+        font-size: 6vw;
+        padding: 10px 55px;
+    }
+    .container{
+        width: 95%;
+    }
+    .con{
+        width: 80%;
+    }
+    .con_lable{
+        font-size: 5vw;
+        padding: 5px 10px;
+    }
+    .con_main {
+        padding: 0 8px;
+        font-size: 3.0vw;
+    }
+    .contacts{
+        flex-wrap: wrap;
+    }
+    .con{
+        margin: 5px 0;
+    }
+    .end{
+        width: 80vw;
+    }
+    .header .links{
+        width: auto;
+    }
+    .header .links *{
+        margin: auto 3px;
+        font-size: 0.8rem;
+    }
+    .about span {
+        font-size: 10vw;
+    }
+    .about {
+        padding-top: 0;
+    }
+    .bg_img .text .add_text {
+        font-size: 6vw;
+    }
+    .blogs{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .new{
+        width: 80%;
+    }
+    .new_img img {
+        width: 80vw;
+    }
+    .blog_lable {
+        font-size: 8vw;
+    }
+    .main_text {
+        font-size: 3vw;
+    }
+}

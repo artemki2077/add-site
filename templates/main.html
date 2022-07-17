@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style/main.css') }}">
+    <title>Cleaning with ❤</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="icon">
+            <a href="/"><img src="{{ url_for('static',filename='imgs/icon.png') }}"></a>
+
+        </div>
+        <div class="links">
+            <div class="Link_block l_Book"><a class="link" href="/Book">Book</a></div>
+            <div class="Link_block l_About"><a class="link" href="#About">About Us</a></div>
+            <div class="Link_block l_Pricing"><a class="link" href="#Pricing">Pricing</a></div>
+            <div class="Link_block l_Contact"><a class="link" href="#Contact">Contact</a></div>
+            <div class="Link_block l_Blog"><a class="link" href="/Blog">Blog</a></div>
+        </div>
+    </div>
+    <div class="bg_img">
+        <img class="bg_img_r" src="{{ url_for('static',filename='imgs/bg_img.jpg') }}">
+        <div class="text">
+            <center><span class="main_text">Click to book!</span></center>
+            <center class="book_click"><a href="/Book">Book</a></center>
+        </div>
+
+    </div>
+    <p><a id="About" name='About'></a></p>
+    <div class="about">
+        <center style="margin-bottom: 5vh;"><span>About Us</span></center>
+        <div class="abavs">
+            <div class="abav">
+                <div style="display: flex;">
+                    <img src="{{ url_for('static',filename='imgs/ab_icon6.png') }}">
+                </div>
+                <div class="text">
+                    Professionals workers
+                </div>
+            </div>
+            <div class="abav">
+                <div style="display: flex;">
+                    <img src="{{ url_for('static',filename='imgs/ab_icon4.png') }}">
+                </div>
+                <div class="text">
+                    We use professional detergents safe for children and animals
+                </div>
+            </div>
+            <div class="abav">
+                <div style="display: flex;">
+                    <img src="{{ url_for('static',filename='imgs/ab_icon3.png') }}">
+                </div>
+                <div class="text">
+                    Company has insurance to provide safe service
+                </div>
+            </div>
+            <div class="abav">
+                <div style="display: flex;">
+                    <img src="{{ url_for('static',filename='imgs/ab_icon5.png') }}">
+                </div>
+                <div class="text">
+                    We do all hard work for you
+                </div>
+            </div>
+            <div class="abav">
+                <div style="display: flex;">
+                    <img src="{{ url_for('static',filename='imgs/ab_icon1.png') }}">
+                </div>
+                <div class="text">
+                    Guaranteed our service (If you're not happy,we re-clean for free)
+                </div>
+            </div>
+            <div class="abav">
+                <div style="display: flex;">
+                    <img src="{{ url_for('static',filename='imgs/ab_icon2.png') }}">
+                </div>
+                <div class="text">
+                    Cleaning with Heart donate 5 $ from each your payment.
+                </div>
+            </div>
+        </div>
+    </div>
+    <p><a id="Pricing" name='Pricing'></a></p>
+    <div class="price">
+        <div class="price_lable">Pricing</div>
+        <div class="container">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="col c1">What</th>
+                        <th class="col c2">amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in pricing %}
+                    <tr>
+                        <td class="cel cl1">{{i}}</td>
+                        <td class="cel cl2">${{pricing[i]}}</td>
+                    </tr>
+                    {% endfor %}
+                    <tr>
+                        <td colspan="2" class="Add_lable">Additional services</td>
+                    </tr>
+                    {% for i in additional_services %}
+                    <tr>
+                        <td class="cel cl1">{{i}}</td>
+                        <td class="cel cl2">${{additional_services[i]}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <p><a id="Contact" name='Contact'></a></p>
+    <div class="contact">
+        <div class="contac_lable">
+            How to contact us
+        </div>
+        <div class="contacts">
+            <div class="con">
+                <img src="{{ url_for('static',filename='imgs/phone.gif') }}">
+                <div class="con_text">
+                    <div class="con_lable">
+                        Phone
+                    </div>
+                    <div class="con_main">
+                        647-262-8989 (Monday-Friday 9am - 5pm)
+                    </div>
+                </div>
+            </div>
+            <div class="con">
+                <img src="{{ url_for('static',filename='imgs/mail.gif') }}">
+                <div class="con_text">
+                    <div class="con_lable">
+                        Mail
+                    </div>
+                    <div class="con_main">
+                        Cleaningwithheartn1@gmail.com
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="test"></div>
+
+    <script src="{{ url_for('static',filename='scripts/main.js') }}">
+
+    </script>
+</body>
+
+</html>

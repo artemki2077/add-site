@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style/main.css') }}">
+    <title>Cleaning with ❤</title>
+</head>
+<body>
+    <script>
+        var pricing =  JSON.parse('{{pricing}}'.replaceAll('&#39;', '"'));
+        var additional_services = JSON.parse('{{additional_services}}'.replaceAll('&#39;', '"'));
+    </script>
+    <style>
+        body{
+            background-color: rgb(108 132 193);
+        }
+    </style>
+    <div class="header">
+        <div class="icon">
+            <a href="/"><img src="{{ url_for('static',filename='imgs/icon.png') }}"></a>
+            
+        </div>
+        <div class="links">
+            <div class="Link_block l_Book"><a class="link" href="#">Book</a></div>
+            <div class="Link_block l_About"><a class="link" href="/#About">About Us</a></div>
+            <div class="Link_block l_Pricing"><a class="link" href="/#Pricing">Pricing</a></div>
+            <div class="Link_block l_Contact"><a class="link" href="/#Contact">Contact</a></div>
+            <div class="Link_block l_Blog"><a class="link" href="/Blog">Blog</a></div>
+        </div>
+    </div>
+    <div class="bg_img">
+        <img class="bg_img_r" src="{{ url_for('static',filename='imgs/bg_img.jpg') }}">
+        <div class="text">
+            <center><span class="main_text">Booking</span></center>
+        </div>
+    </div>
+    <div class="form">
+        <form method="post">
+            <div class="name">
+                <h3>Your name</h3>
+                <input name="name" type="text" placeholder="Artem Kiselev">
+            </div>
+            <div class="name">
+                <h3>E-mail</h3>
+                <input name="mail" type="email" placeholder="example@mail.com">
+            </div>
+            <div class="name">
+                <h3>Phone</h3>
+                <input name="phone" type="tel" placeholder="+1 (234) 567-8910">
+            </div>
+            <div class="name">
+                <h3>Home</h3>
+                <div class="adr_elem">
+                    <input name="addr" type="text" placeholder="address">
+                </div>
+                <div class="adr_elem">
+                    <input name="apt" type="text" placeholder="apt/suite">
+                </div>
+            </div>
+            <div class="price" style="padding-bottom: 10px;">
+                <div class="select_lable">Select service</div>
+                <div class="container">
+            <table id="table">
+                <thead>
+                    <tr>
+                        <th class="col c0"><input id="main"type="checkbox"></th>
+                        <th class="col c1">What</th>
+                        <th class="col c2">amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in pricing %}
+                        <tr>
+                            <td class="cel cl0"><input name="{{i}}" id="{{i}}" type="checkbox"></td>
+                            <td class="cel cl1">{{i}}</td>
+                            <td class="cel cl2">${{pricing[i]}}</td>
+                        </tr>
+                    {% endfor %}
+                    <tr>
+                        <td colspan="3" class="Add_lable">Additional services</td>
+                    </tr>
+                    {% for i in additional_services %}
+                        <tr>
+                            <td class="cel cl0"><input name='{{i}}' id="{{i}}" type="checkbox"></td>
+                            <td class="cel cl1">{{i}}</td>
+                            <td class="cel cl2">${{additional_services[i]}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+            </div>
+            <div class="end">
+                <div class="el sub_total">
+                    SUB-TOTAL: $0
+                </div>
+                <div class="el tax">
+                    SALES TAX: $0
+                </div>
+                <div class="el sum">
+                    TOTAL: <div style="display: inline; font-family: Ubuntu-Bold" class="end_sum">$0</div>
+                </div>
+            </div>
+            
+            <div class="submit">
+                    <input type="submit"> 
+            </div>
+        </form>
+    </div>
+    <script src="{{ url_for('static',filename='scripts/book.js') }}"></script>
+</body>
+</html>
