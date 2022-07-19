@@ -156,7 +156,7 @@ def page_book():
         answer += f'\nsum: ${su}\ntax: ${su * 0.13}\nTOTAL: ${su * 1.13}'
         for i in bot_settings["active_ids"]:
             bot.send_message(i, answer)
-        return 'ok'
+        return redirect('/')
 
     return render_template("book.html", pricing=pricing, additional_services=additional_services)
 
