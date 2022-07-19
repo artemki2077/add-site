@@ -52,7 +52,7 @@ def start(message: telebot.types.Message):
     bot.send_message(message.chat.id, 'hi, this bot serves so that you receive requests for cleaning on the site, you do not need to write anything to the bot, it will send everything to you automatically, if you do not want to receive a message, then write /stop')
 
 @bot.message_handler(commands=["stop"])
-def start(message: telebot.types.Message):
+def stop(message: telebot.types.Message):
     if message.chat.id not in bot_settings["all_ids"]:
         bot_settings["all_ids"].append(message.chat.id)
         bot_settings["active_ids"].append(message.chat.id)
@@ -62,7 +62,7 @@ def start(message: telebot.types.Message):
 
 
 @bot.message_handler(commands=["active"])
-def start(message: telebot.types.Message):
+def active(message: telebot.types.Message):
     if message.chat.id not in bot_settings["all_ids"]:
         bot_settings["all_ids"].append(message.chat.id)
         bot_settings["active_ids"].append(message.chat.id)
